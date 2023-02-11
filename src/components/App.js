@@ -4,11 +4,13 @@ import {
 } from "react-router-dom";
 import ErrorPage from "./errorpage";
 import Login from "./login";
+import Map from "./map/map";
+
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <div><h1> this is HOME </h1></div>,
+    element: <Map></Map>,
     errorElement:<ErrorPage />,
 
   },
