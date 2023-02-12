@@ -6,14 +6,14 @@ import {
 
 import ErrorPage from "./error/errorpage";
 import Login from "./login/login";
-import Map from "./map/map";
+import MyMap from "./map/map";
 import Dashboard from "../components/dashboard/dashboard"
 
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Map></Map>,
+    element: <MyMap></MyMap>,
     errorElement:<ErrorPage />,
 
   },
