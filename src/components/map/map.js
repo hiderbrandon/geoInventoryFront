@@ -10,6 +10,13 @@ const apiKey = config.mapboxToken;
 
 mapboxgl.accessToken = apiKey;
 
+const points = [
+  { lng: -76.536081, lat: 3.377859 },
+  { lng: -76.5365, lat: 3.3779 },
+  // ...
+];
+
+
 export default function Map() {
   const mapContainer = useRef(null);
   const map = useRef(null);
@@ -33,7 +40,13 @@ export default function Map() {
       setLng(map.current.getCenter().lng.toFixed(4));
       setLat(map.current.getCenter().lat.toFixed(4));
       setZoom(map.current.getZoom().toFixed(2));
+
+
+      new mapboxgl.Marker()
+        .setLngLat([3.377859 , -76.536081, ])
+        .addTo(map.current);
     });
+    
   });
 
   return (

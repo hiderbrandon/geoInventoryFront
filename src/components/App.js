@@ -2,9 +2,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import ErrorPage from "./errorpage";
-import Login from "./login";
+
+
+import ErrorPage from "./error/errorpage";
+import Login from "./login/login";
 import Map from "./map/map";
+import Dashboard from "../components/dashboard/dashboard"
 
 
 const routes = createBrowserRouter([
@@ -17,6 +20,11 @@ const routes = createBrowserRouter([
   {
     path:"/login",
     element: <Login></Login>,
+    errorElement:<ErrorPage />
+  },
+  {
+    path:"/dashboard",
+    element: <Dashboard></Dashboard>,
     errorElement:<ErrorPage />
   }
 ]);

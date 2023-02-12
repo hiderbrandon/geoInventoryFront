@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { config } from "../../config";
+
+const URL= config.backUrl;
 
 function Login() {
 
@@ -21,7 +24,7 @@ function Login() {
       const handleSubmit = async e => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3001/auth/login',  formData );
+            const response = await axios.post(`${URL}/auth/login`,  formData );
             const data = response.data;
             console.log(data);
             if (!response) {
