@@ -1,5 +1,24 @@
 [
-    {"city":"New York","population":"8,175,133","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg","state":"New York","latitude":3.375342573420178,"longitude":-76.53319173883236} ,
-    {"city":"New York","population":"8,175,133","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg","state":"New York","latitude":3.375341,"longitude":-76.540625}
+    {"image":"http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+    "coordinates": {
+      "type": "string" ,
+      "coordinates":[3.375342573420178 ,-76.53319173883236 ]
+    } ,
+    "properties": {
+      "title": "UNIVALLE", 
+      "description": "uiversidad publica" 
+      } } ,
+    {"image":"http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+    
+    "coordinates": {
+      "type": "string" ,
+      "coordinates":[3.375341 ,-76.540625 ]
+    } ,
+    "properties": {
+      "title": "UNIVALLE", 
+      "description": "uiversidad publica" 
+    }
+  }
    
+
   ]

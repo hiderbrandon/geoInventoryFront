@@ -31,6 +31,7 @@ function Login() {
                 throw new Error("login failed");
             }
             localStorage.setItem('jwt', data.access_token);
+            localStorage.setItem('username', data.name);
             navigate('/');
         } catch (err) {
             setError(err.message);
@@ -39,21 +40,40 @@ function Login() {
 
 
     return (
+        
         <div className="container">
-          <h1 className="text-center my-5">Login</h1>
-          <form>
-            <div className="form-group">
-              <label htmlFor="username">Username</label>
-              <input type="text" className="form-control" id="username" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input type="password" className="form-control" id="password" />
-            </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
-          </form>
+            <h1 className="text-center my-5">Login</h1>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <form onSubmit={handleSubmit}>
+                <div className="form-group">
+                    <label htmlFor="username">username</label>
+                    <input
+                        id="username"
+                        type="username"
+                        name="username"
+                        className="form-control"
+                        value={username}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input
+                        id="password"
+                        type="password"
+                        className="form-control" 
+                        name="password"
+                        value={password}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
         </div>
-      );
+     );
 }
+
 
 export default Login;
