@@ -26,13 +26,12 @@ function Login() {
         try {
             const response = await axios.post(`${URL}/auth/login`,  formData );
             const data = response.data;
-            console.log(data);
             if (!response) {
                 throw new Error("login failed");
             }
             localStorage.setItem('jwt', data.access_token);
             localStorage.setItem('username', data.name);
-            navigate('/');
+            navigate('/dashboard');
         } catch (err) {
             setError(err.message);
         }

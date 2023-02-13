@@ -7,13 +7,12 @@ import {
 import ErrorPage from "./error/errorpage";
 import Login from "./login/login";
 import MyMap from "./map/map";
-import Dashboard from "../components/dashboard/dashboard"
 
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <MyMap></MyMap>,
+    element: <Login></Login>,
     errorElement:<ErrorPage />,
 
   },
@@ -24,7 +23,7 @@ const routes = createBrowserRouter([
   },
   {
     path:"/dashboard",
-    element: <Dashboard></Dashboard>,
+    element: <MyMap></MyMap>,
     errorElement:<ErrorPage />
   }
 ]);
