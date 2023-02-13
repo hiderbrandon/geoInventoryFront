@@ -39,34 +39,21 @@ function Login() {
 
 
     return (
-        <div>
-            <h1>Login</h1>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="username">username</label>
-                    <input
-                        type="username"
-                        name="username"
-                        value={username}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="password">Password</label>
-                    <input
-                        type="password"
-                        name="password"
-                        value={password}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+        <div className="container">
+          <h1 className="text-center my-5">Login</h1>
+          <form>
+            <div className="form-group">
+              <label htmlFor="username">Username</label>
+              <input type="text" className="form-control" id="username" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input type="password" className="form-control" id="password" />
+            </div>
+            <button type="submit" className="btn btn-primary">Submit</button>
+          </form>
         </div>
-     );
+      );
 }
 
 export default Login;
