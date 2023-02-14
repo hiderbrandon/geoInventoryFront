@@ -7,18 +7,24 @@ import {
 import ErrorPage from "./error/errorpage";
 import Login from "./login/login";
 import MyMap from "./map/map";
+import SignIn from "./signIn/singIn";
 
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Login></Login>,
+    element: <SignIn></SignIn>,
     errorElement:<ErrorPage />,
 
   },
   {
     path:"/login",
     element: <Login></Login>,
+    errorElement:<ErrorPage />
+  },
+  {
+    path:"/sginin",
+    element: <SignIn></SignIn>,
     errorElement:<ErrorPage />
   },
   {
